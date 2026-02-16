@@ -108,6 +108,6 @@ targets:
         bin: ""
         config: .eide/debug.pyocd.yaml
         otherCmds: ""
-        speed: 2M
+        speed: 1M
         targetName: stm32f103rc
     uploader: pyOCD

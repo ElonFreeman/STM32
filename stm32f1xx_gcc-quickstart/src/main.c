@@ -36,6 +36,6 @@ int main()
     while (1)
     {
         GPIO_WriteBit(LED_PORT, LED_PIN, (BitAction)!GPIO_ReadInputDataBit(LED_PORT, LED_PIN));
-        delay(3000);
+        delay(5000);
     }
 }
