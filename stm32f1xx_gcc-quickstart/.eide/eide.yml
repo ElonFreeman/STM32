@@ -1,8 +1,8 @@
 version: "4.1"
 name: stm32f1xx_gcc
 type: ARM
-deviceName: STM32F102C8
-packDir: null
+deviceName: null
+packDir: .pack/Keil/STM32F4xx_DFP.2.14.0
 srcDirs:
   - src
   - hal
@@ -44,6 +44,8 @@ targets:
       - hal/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c
       - hal/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.c
       - hal/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c
+    settings:
+      debugger: cortex-debug
     toolchain: GCC
     toolchainConfigMap:
       GCC:
@@ -103,6 +105,11 @@ targets:
         otherCmds: ""
         proType: 1
         speed: 8000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: stlink
+        target: stm32f1x
       pyOCD:
         baseAddr: "0x08000000"
         bin: ""

@@ -13,7 +13,7 @@
 
 #define LED_PERIPH RCC_APB2Periph_GPIOA
 #define LED_PORT GPIOA
-#define LED_PIN GPIO_Pin_1
+#define LED_PIN GPIO_Pin_4
 
 void delay(int x)
 {
