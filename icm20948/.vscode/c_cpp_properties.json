@@ -6,7 +6,10 @@
             "intelliSenseMode": "gcc-arm",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "compilerPath": "/usr/bin/arm-none-eabi-gcc"
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ]
         }
     ],
     "version": 4
