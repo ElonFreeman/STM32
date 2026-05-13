@@ -104,8 +104,8 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   
-  char text1[] = "#000P2000T1500!\r\n";
-  char text2[] = "#000PULK!\r\n";
+  char text1[] = "#000P2000T1500!";
+  char text2[] = "#000PULK!";
   HAL_UART_Transmit(&huart4, (uint8_t*)text1, strlen(text1), 100);
   HAL_Delay(3000);
   HAL_UART_Transmit(&huart4, (uint8_t*)text2, strlen(text2), 100);
@@ -115,6 +115,7 @@ int main(void)
   char id[7]={0};
   HAL_UART_Transmit(&huart4,(uint8_t*)check_id,strlen(check_id),100);
   HAL_Delay(3000);
+  
 
   if(HAL_UART_Receive(&huart4,(uint8_t*)id,6,100)==HAL_OK)
   {
