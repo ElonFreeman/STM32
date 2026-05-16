@@ -104,31 +104,31 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   
-  char text1[] = "#000P2000T1500!";
-  char text2[] = "#000PULK!";
+  char text1[] = "#001P2000T1500!";
+  char text2[] = "#001PULK!";
   HAL_UART_Transmit(&huart4, (uint8_t*)text1, strlen(text1), 100);
-  HAL_Delay(3000);
+  HAL_Delay(200);
   HAL_UART_Transmit(&huart4, (uint8_t*)text2, strlen(text2), 100);
   
 
-  char check_id[]="#000PID!";
-  char id[7]={0};
-  HAL_UART_Transmit(&huart4,(uint8_t*)check_id,strlen(check_id),100);
-  HAL_Delay(3000);
+  char check_id[]="#000PID001!";
+  char id[11]={0};
   
-
-  if(HAL_UART_Receive(&huart4,(uint8_t*)id,6,100)==HAL_OK)
+  HAL_UART_Transmit(&huart4,(uint8_t*)check_id,strlen(check_id),5);
+  HAL_StatusTypeDef status=HAL_UART_Receive(&huart4,(uint8_t*)id,6,30);
+  //__HAL_UART_CLEAR_OREFLAG(&huart4);
+  
+  if(status==HAL_OK)
   {
-    id[6]='\0';
+    id[10]='\0';
     printf("%s\r\n",id);
   }
   else
   {
-    printf("error!\r\n");
+    printf("%d\r\n",status);
   }
   
   
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
