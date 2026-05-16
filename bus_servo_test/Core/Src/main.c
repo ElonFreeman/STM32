@@ -63,6 +63,17 @@ int _write(int file,char *ptr,int len)
   
   return len;
 }
+
+/*中断回调*/
+volatile uint8_t rx_complete = 0;
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    if (huart->Instance == huart4.Instance)
+    {
+        rx_complete = 1;
+        // 数据已填满，在这里处理或设置标志
+    }
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -104,28 +115,35 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   
-  char text1[] = "#001P2000T1500!";
-  char text2[] = "#001PULK!";
+  /*char text1[] = "#001P2000T1500!";//指令作动
+  char text2[] = "#001PULK!";//释放扭力
   HAL_UART_Transmit(&huart4, (uint8_t*)text1, strlen(text1), 100);
   HAL_Delay(200);
   HAL_UART_Transmit(&huart4, (uint8_t*)text2, strlen(text2), 100);
-  
+  */
 
-  char check_id[]="#000PID001!";
-  char id[11]={0};
+  char check_position[]="#001PRAD!";
+  char position[11]={0};
   
-  HAL_UART_Transmit(&huart4,(uint8_t*)check_id,strlen(check_id),5);
-  HAL_StatusTypeDef status=HAL_UART_Receive(&huart4,(uint8_t*)id,6,30);
-  //__HAL_UART_CLEAR_OREFLAG(&huart4);
+  HAL_UART_Transmit(&huart4,(uint8_t*)check_position,strlen(check_position),1);
+  HAL_StatusTypeDef status=HAL_UART_Receive_IT(&huart4,(uint8_t*)position,10);
   
-  if(status==HAL_OK)
+  /*等待接收*/
+  uint32_t start = HAL_GetTick();
+  while (!rx_complete && (HAL_GetTick() - start) < 500)
   {
-    id[10]='\0';
-    printf("%s\r\n",id);
+      // 等待
+  }
+
+  if(status==HAL_OK && rx_complete==1)
+  {
+    printf("%d\r\n",status);
+    position[10]='\0';
+    printf("%s\r\n",position);
   }
   else
   {
-    printf("%d\r\n",status);
+    printf("%d,%d\r\n",status,rx_complete);
   }
   
   
