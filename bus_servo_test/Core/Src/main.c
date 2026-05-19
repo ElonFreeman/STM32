@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "stm32f407xx.h"
 #include "string.h"
 #include "stdio.h"
 /* USER CODE END Includes */
@@ -46,7 +47,7 @@ UART_HandleTypeDef huart5;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-
+uint8_t position[11]={0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -68,10 +69,34 @@ int _write(int file,char *ptr,int len)
 volatile uint8_t rx_complete = 0;
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-    if (huart->Instance == huart4.Instance)
+    if (huart->Instance == UART4)
     {
         rx_complete = 1;
+        printf("%d\r\n",rx_complete);
         // 数据已填满，在这里处理或设置标志
+    }
+}
+
+// 1. 先使能错误中断
+
+
+// 2. 实现错误回调
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
+{
+    if(huart->Instance == huart4.Instance)
+    {
+        if(huart->ErrorCode & HAL_UART_ERROR_ORE)  // 溢出错误
+        {
+            // 清除溢出标志
+            __HAL_UART_CLEAR_OREFLAG(huart);
+            
+            // 强制解锁HAL库的状态锁（关键！）
+            huart->Lock = HAL_UNLOCKED;
+            huart->RxState = HAL_UART_STATE_READY;
+            
+            // 重新启动接收
+            HAL_UART_Receive_IT(huart, (uint8_t*)position, 10);
+        }
     }
 }
 /* USER CODE END PFP */
@@ -114,39 +139,33 @@ int main(void)
   MX_UART5_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  
-  /*char text1[] = "#001P2000T1500!";//指令作动
-  char text2[] = "#001PULK!";//释放扭力
-  HAL_UART_Transmit(&huart4, (uint8_t*)text1, strlen(text1), 100);
-  HAL_Delay(200);
-  HAL_UART_Transmit(&huart4, (uint8_t*)text2, strlen(text2), 100);
-  */
-
   char check_position[]="#001PRAD!";
-  char position[11]={0};
   
+  
+  __HAL_UART_DISABLE_IT(&huart4, UART_IT_RXNE);
+  HAL_HalfDuplex_EnableTransmitter(&huart4);
   HAL_UART_Transmit(&huart4,(uint8_t*)check_position,strlen(check_position),1);
-  HAL_StatusTypeDef status=HAL_UART_Receive_IT(&huart4,(uint8_t*)position,10);
   
-  /*等待接收*/
-  uint32_t start = HAL_GetTick();
-  while (!rx_complete && (HAL_GetTick() - start) < 500)
-  {
-      // 等待
-  }
+  /*清除标志位*/
+  __HAL_UART_CLEAR_FLAG(&huart4, UART_FLAG_RXNE);
+  __HAL_UART_CLEAR_FLAG(&huart4, UART_FLAG_ORE);
+  HAL_HalfDuplex_EnableReceiver(&huart4);
+  HAL_StatusTypeDef status=HAL_UART_Receive_IT(&huart4,(uint8_t*)position,1);
 
-  if(status==HAL_OK && rx_complete==1)
+  while(rx_complete==0)
   {
-    printf("%d\r\n",status);
-    position[10]='\0';
-    printf("%s\r\n",position);
+    printf("0\r\n");
+    HAL_Delay(1);
+  }
+  
+  if(status==HAL_OK)  //HAL_OK=0
+  {
+    printf("posi:%d\r\n",position[0]);
   }
   else
   {
-    printf("%d,%d\r\n",status,rx_complete);
+    printf("%d\r\n",status);
   }
-  
-  
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -229,7 +248,7 @@ static void MX_UART4_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN UART4_Init 2 */
-
+  SET_BIT(huart4.Instance->CR3, USART_CR3_EIE);
   /* USER CODE END UART4_Init 2 */
 
 }
