@@ -47,7 +47,9 @@ UART_HandleTypeDef huart5;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-uint8_t position[11]={0};
+char check_position[]="#001PRAD!";
+char position[11]={0};
+volatile uint8_t rxflag=0;//中断回调标志位
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -57,48 +59,7 @@ static void MX_UART4_Init(void);
 static void MX_UART5_Init(void);
 static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
-int _write(int file,char *ptr,int len)
-{
-  if(HAL_UART_Transmit(&huart1,(uint8_t*)ptr,len,HAL_MAX_DELAY)!=HAL_OK)
-  {return -1;}
-  
-  return len;
-}
 
-/*中断回调*/
-volatile uint8_t rx_complete = 0;
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-    if (huart->Instance == UART4)
-    {
-        rx_complete = 1;
-        printf("%d\r\n",rx_complete);
-        // 数据已填满，在这里处理或设置标志
-    }
-}
-
-// 1. 先使能错误中断
-
-
-// 2. 实现错误回调
-void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
-{
-    if(huart->Instance == huart4.Instance)
-    {
-        if(huart->ErrorCode & HAL_UART_ERROR_ORE)  // 溢出错误
-        {
-            // 清除溢出标志
-            __HAL_UART_CLEAR_OREFLAG(huart);
-            
-            // 强制解锁HAL库的状态锁（关键！）
-            huart->Lock = HAL_UNLOCKED;
-            huart->RxState = HAL_UART_STATE_READY;
-            
-            // 重新启动接收
-            HAL_UART_Receive_IT(huart, (uint8_t*)position, 10);
-        }
-    }
-}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -138,29 +99,25 @@ int main(void)
   MX_UART4_Init();
   MX_UART5_Init();
   MX_USART1_UART_Init();
-  /* USER CODE BEGIN 2 */
-  char check_position[]="#001PRAD!";
+  /* USER CODE BEGIN 2 */ 
   
-  
-  __HAL_UART_DISABLE_IT(&huart4, UART_IT_RXNE);
   HAL_HalfDuplex_EnableTransmitter(&huart4);
   HAL_UART_Transmit(&huart4,(uint8_t*)check_position,strlen(check_position),1);
   
-  /*清除标志位*/
-  __HAL_UART_CLEAR_FLAG(&huart4, UART_FLAG_RXNE);
-  __HAL_UART_CLEAR_FLAG(&huart4, UART_FLAG_ORE);
+  
+  while (__HAL_UART_GET_FLAG(&huart4, UART_FLAG_TC) == RESET);
+  volatile uint32_t tmpreg = 0x00U;
+  tmpreg = huart4.Instance->DR; // 如果是 F1/F4 系列，请将 RDR 改为 DR
+  UNUSED(tmpreg);
+  __HAL_UART_CLEAR_FLAG(&huart4, UART_FLAG_ORE | UART_FLAG_NE | UART_FLAG_FE);
+  huart4.RxState = HAL_UART_STATE_READY;
+
   HAL_HalfDuplex_EnableReceiver(&huart4);
   HAL_StatusTypeDef status=HAL_UART_Receive_IT(&huart4,(uint8_t*)position,1);
-
-  while(rx_complete==0)
-  {
-    printf("0\r\n");
-    HAL_Delay(1);
-  }
   
   if(status==HAL_OK)  //HAL_OK=0
   {
-    printf("posi:%d\r\n",position[0]);
+    printf("%d %d\r\n",status,rxflag);
   }
   else
   {
@@ -341,7 +298,44 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+/*串口打印*/
+int _write(int file,char *ptr,int len)
+{
+  if(HAL_UART_Transmit(&huart1,(uint8_t*)ptr,len,HAL_MAX_DELAY)!=HAL_OK)
+  {return -1;}
+  
+  return len;
+}
 
+/*接收中断回调*/
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    rxflag=1;
+    if(huart->Instance == UART4)
+    {
+        rxflag=2;
+        // 成功在 1640 μs 的数据流中抓到了第一个字节！
+        printf("Servo Pos: %d\r\n", position[0]);
+    }
+}
+
+/*错误回调*/
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
+{
+    if(huart->Instance == UART4)
+    {
+        uint32_t err = HAL_UART_GetError(huart); 
+        // 在这里打断点！！看 err 的值是多少
+        // HAL_UART_ERROR_FE  (0x04U) -> 帧错误
+        // HAL_UART_ERROR_NE  (0x02U) -> 噪声错误
+        // HAL_UART_ERROR_ORE (0x08U) -> 过载错误
+        
+        // 错误发生后，必须手动清除错误并重新使能接收中断，否则串口就死在这里了
+        __HAL_UART_CLEAR_FLAG(huart, UART_FLAG_ORE | UART_FLAG_NE | UART_FLAG_FE);
+        huart->RxState = HAL_UART_STATE_READY;
+    }
+}
 /* USER CODE END 4 */
 
 /**
