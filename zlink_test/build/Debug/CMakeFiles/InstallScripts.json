@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/fedora/STM32_projects/zlink_test/build/Debug/cmake_install.cmake",
+		"/home/fedora/STM32_projects/zlink_test/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
