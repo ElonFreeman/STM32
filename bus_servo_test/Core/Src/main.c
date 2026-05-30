@@ -18,6 +18,8 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "usart.h"
+#include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -42,22 +44,22 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-UART_HandleTypeDef huart4;
-UART_HandleTypeDef huart5;
-UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
+
+//char check_position[]="#000P1000T1000!";
+//char check_position[]="#000P1500T1000!";
+//char check_position[]="#000P2000T1000!";
+
 char check_position[]="#001PRAD!";
 char position[11]={0};
-volatile uint8_t rxflag=0;//中断回调标志位
+uint8_t status=0;
+uint8_t byte=0;
+uint16_t counter=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-static void MX_GPIO_Init(void);
-static void MX_UART4_Init(void);
-static void MX_UART5_Init(void);
-static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -99,30 +101,20 @@ int main(void)
   MX_UART4_Init();
   MX_UART5_Init();
   MX_USART1_UART_Init();
-  /* USER CODE BEGIN 2 */ 
+  /* USER CODE BEGIN 2 */
   
-  HAL_HalfDuplex_EnableTransmitter(&huart4);
+  //HAL_HalfDuplex_EnableTransmitter(&huart4);
   HAL_UART_Transmit(&huart4,(uint8_t*)check_position,strlen(check_position),1);
+  HAL_UART_Receive_IT(&huart4,(uint8_t*)&byte,1);
   
-  
-  while (__HAL_UART_GET_FLAG(&huart4, UART_FLAG_TC) == RESET);
-  volatile uint32_t tmpreg = 0x00U;
-  tmpreg = huart4.Instance->DR; // 如果是 F1/F4 系列，请将 RDR 改为 DR
-  UNUSED(tmpreg);
-  __HAL_UART_CLEAR_FLAG(&huart4, UART_FLAG_ORE | UART_FLAG_NE | UART_FLAG_FE);
-  huart4.RxState = HAL_UART_STATE_READY;
-
-  HAL_HalfDuplex_EnableReceiver(&huart4);
-  HAL_StatusTypeDef status=HAL_UART_Receive_IT(&huart4,(uint8_t*)position,1);
-  
-  if(status==HAL_OK)  //HAL_OK=0
-  {
-    printf("%d %d\r\n",status,rxflag);
-  }
-  else
-  {
-    printf("%d\r\n",status);
-  }
+  // if(status==HAL_OK)  //HAL_OK=0
+  // {
+  //   printf("%d %d\r\n",status,rxflag);
+  // }
+  // else
+  // {
+  //   printf("%d\r\n",status);
+  // }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -132,6 +124,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    HAL_HalfDuplex_EnableTransmitter(&huart4);
+    HAL_UART_Transmit(&huart4,(uint8_t*)check_position,strlen(check_position),1);
+    HAL_HalfDuplex_EnableReceiver(&huart4);
+    HAL_UART_Receive_IT(&huart4,(uint8_t*)&byte,1);HAL_Delay(5000);
   }
   /* USER CODE END 3 */
 }
@@ -177,126 +173,6 @@ void SystemClock_Config(void)
   }
 }
 
-/**
-  * @brief UART4 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_UART4_Init(void)
-{
-
-  /* USER CODE BEGIN UART4_Init 0 */
-
-  /* USER CODE END UART4_Init 0 */
-
-  /* USER CODE BEGIN UART4_Init 1 */
-
-  /* USER CODE END UART4_Init 1 */
-  huart4.Instance = UART4;
-  huart4.Init.BaudRate = 115200;
-  huart4.Init.WordLength = UART_WORDLENGTH_8B;
-  huart4.Init.StopBits = UART_STOPBITS_1;
-  huart4.Init.Parity = UART_PARITY_NONE;
-  huart4.Init.Mode = UART_MODE_TX_RX;
-  huart4.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart4.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_HalfDuplex_Init(&huart4) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN UART4_Init 2 */
-  SET_BIT(huart4.Instance->CR3, USART_CR3_EIE);
-  /* USER CODE END UART4_Init 2 */
-
-}
-
-/**
-  * @brief UART5 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_UART5_Init(void)
-{
-
-  /* USER CODE BEGIN UART5_Init 0 */
-
-  /* USER CODE END UART5_Init 0 */
-
-  /* USER CODE BEGIN UART5_Init 1 */
-
-  /* USER CODE END UART5_Init 1 */
-  huart5.Instance = UART5;
-  huart5.Init.BaudRate = 115200;
-  huart5.Init.WordLength = UART_WORDLENGTH_8B;
-  huart5.Init.StopBits = UART_STOPBITS_1;
-  huart5.Init.Parity = UART_PARITY_NONE;
-  huart5.Init.Mode = UART_MODE_TX_RX;
-  huart5.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart5.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&huart5) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN UART5_Init 2 */
-
-  /* USER CODE END UART5_Init 2 */
-
-}
-
-/**
-  * @brief USART1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USART1_UART_Init(void)
-{
-
-  /* USER CODE BEGIN USART1_Init 0 */
-
-  /* USER CODE END USART1_Init 0 */
-
-  /* USER CODE BEGIN USART1_Init 1 */
-
-  /* USER CODE END USART1_Init 1 */
-  huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
-  huart1.Init.WordLength = UART_WORDLENGTH_8B;
-  huart1.Init.StopBits = UART_STOPBITS_1;
-  huart1.Init.Parity = UART_PARITY_NONE;
-  huart1.Init.Mode = UART_MODE_TX_RX;
-  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&huart1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USART1_Init 2 */
-
-  /* USER CODE END USART1_Init 2 */
-
-}
-
-/**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_GPIO_Init(void)
-{
-  /* USER CODE BEGIN MX_GPIO_Init_1 */
-
-  /* USER CODE END MX_GPIO_Init_1 */
-
-  /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOD_CLK_ENABLE();
-
-  /* USER CODE BEGIN MX_GPIO_Init_2 */
-
-  /* USER CODE END MX_GPIO_Init_2 */
-}
-
 /* USER CODE BEGIN 4 */
 /*串口打印*/
 int _write(int file,char *ptr,int len)
@@ -309,33 +185,53 @@ int _write(int file,char *ptr,int len)
 
 /*接收中断回调*/
 
+
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-    rxflag=1;
-    if(huart->Instance == UART4)
+  /* Prevent unused argument(s) compilation warning */
+  UNUSED(huart);
+  
+  if(huart==&huart4)
+  {
+    if(status==0)
     {
-        rxflag=2;
-        // 成功在 1640 μs 的数据流中抓到了第一个字节！
-        printf("Servo Pos: %d\r\n", position[0]);
+      counter=0;
+      position[counter]=byte;
+      counter++;
+      status=1;
     }
+    else
+    {
+      position[counter]=byte;
+      counter++;
+      if(counter>=10)
+      {
+        status=2;
+        position[counter]=0;
+        printf("%s\r\n",position);
+      }
+    }
+    HAL_UART_Receive_IT(&huart4,(uint8_t*)&byte,1);
+  }
+  
 }
 
 /*错误回调*/
-void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
-{
-    if(huart->Instance == UART4)
-    {
-        uint32_t err = HAL_UART_GetError(huart); 
-        // 在这里打断点！！看 err 的值是多少
-        // HAL_UART_ERROR_FE  (0x04U) -> 帧错误
-        // HAL_UART_ERROR_NE  (0x02U) -> 噪声错误
-        // HAL_UART_ERROR_ORE (0x08U) -> 过载错误
+// void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
+// {
+//     if(huart->Instance == UART4)
+//     {
+//         uint32_t err = HAL_UART_GetError(huart); 
+//         // 在这里打断点！！看 err 的值是多少
+//         // HAL_UART_ERROR_FE  (0x04U) -> 帧错误
+//         // HAL_UART_ERROR_NE  (0x02U) -> 噪声错误
+//         // HAL_UART_ERROR_ORE (0x08U) -> 过载错误
         
-        // 错误发生后，必须手动清除错误并重新使能接收中断，否则串口就死在这里了
-        __HAL_UART_CLEAR_FLAG(huart, UART_FLAG_ORE | UART_FLAG_NE | UART_FLAG_FE);
-        huart->RxState = HAL_UART_STATE_READY;
-    }
-}
+//         // 错误发生后，必须手动清除错误并重新使能接收中断，否则串口就死在这里了
+//         __HAL_UART_CLEAR_FLAG(huart, UART_FLAG_ORE | UART_FLAG_NE | UART_FLAG_FE);
+//         huart->RxState = HAL_UART_STATE_READY;
+//     }
+// }
 /* USER CODE END 4 */
 
 /**
