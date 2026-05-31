@@ -44,9 +44,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-char check_position[9]="#005PRAD!";
+char check_position[9]="#004PRAD!";
 char release_torque[9]="#255PULK!";
-char command[]="#001P0500T0000!";
+char command[]="#005P0500T0000!";
 char currrent_position[10]={};
 /* USER CODE END PV */
 
@@ -101,16 +101,18 @@ int main(void)
   while (1)
   {
     HAL_UART_Transmit(&huart4,(uint8_t*)check_position,sizeof(check_position),1);
-    HAL_UART_Receive(&huart4,(uint8_t*)currrent_position,sizeof(currrent_position),2);
-    printf("%s\r\n",currrent_position);
+    HAL_UART_Receive(&huart4,(uint8_t*)currrent_position,sizeof(currrent_position),4);
+    printf("\r%s\r\n",currrent_position);
     for(uint8_t i=5,j=5;i<=8;i++,j++)
     {
       command[i]=currrent_position[j];
     }
-    if(command[5]==2 && command[6]==5)
+    /*if((command[5]=='2' && command[6]=='5') || (command[5]=='0' && command[6]=='5'))//
     {continue;}
     else
     {HAL_UART_Transmit(&huart4,(uint8_t*)command,sizeof(command),2);}
+    
+    */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
