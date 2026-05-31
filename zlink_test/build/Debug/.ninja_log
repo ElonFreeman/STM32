@@ -6,7 +6,7 @@
 6	162	1780137180037692918	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj	37c5fabf3e19c138
 3	165	1780137180033863870	CMakeFiles/zlink_test.dir/Core/Src/usart.c.obj	5732462b84d36b0e
 3	166	1780137180034164257	CMakeFiles/zlink_test.dir/Core/Src/stm32f4xx_it.c.obj	163acbc23c17fdba
-2	167	1780137180032280498	CMakeFiles/zlink_test.dir/Core/Src/main.c.obj	be8fd40331141705
+2	146	1780144638537514389	CMakeFiles/zlink_test.dir/Core/Src/main.c.obj	be8fd40331141705
 8	174	1780137180038934836	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj	9c35b86c694a0ef5
 3	176	1780137180034478892	CMakeFiles/zlink_test.dir/Core/Src/stm32f4xx_hal_msp.c.obj	1be594d0ef3ea43d
 9	180	1780137180039837185	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj	72a658cb91fb9a86
@@ -22,4 +22,4 @@
 6	214	1780137180037119451	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj	4240943ec7ead964
 9	215	1780137180040151820	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj	27a0fd265ac1891
 5	277	1780137180036081750	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj	4379e4edc9a642a0
-3	101	1780137258220297542	zlink_test.elf	b0f65085d3105c58
+146	234	1780144638681512579	zlink_test.elf	b0f65085d3105c58

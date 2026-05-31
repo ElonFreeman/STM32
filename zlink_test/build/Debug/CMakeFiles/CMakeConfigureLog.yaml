@@ -21,6 +21,8 @@ events:
       - "uname"
     candidate_directories:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
@@ -35,6 +37,8 @@ events:
       - "/bin/"
     searched_directories:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/uname"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/uname"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/uname"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/uname"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/uname"
       - "/home/fedora/STM32_projects/zlink_test/c/uname"
@@ -45,6 +49,9 @@ events:
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -90,6 +97,8 @@ events:
       - "samu"
     candidate_directories:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
@@ -105,30 +114,13 @@ events:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/ninja-build"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/ninja"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/samu"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/ninja-build"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/ninja"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/samu"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/ninja-build"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/ninja"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/samu"
-      - "/home/fedora/STM32_projects/zlink_test/c/ninja-build"
-      - "/home/fedora/STM32_projects/zlink_test/c/ninja"
-      - "/home/fedora/STM32_projects/zlink_test/c/samu"
-      - "/home/fedora/.local/bin/ninja-build"
-      - "/home/fedora/.local/bin/ninja"
-      - "/home/fedora/.local/bin/samu"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/ninja-build"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/ninja"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/samu"
-      - "/home/fedora/.cargo/bin/ninja-build"
-      - "/home/fedora/.cargo/bin/ninja"
-      - "/home/fedora/.cargo/bin/samu"
-      - "/usr/local/bin/ninja-build"
-      - "/usr/local/bin/ninja"
-      - "/usr/local/bin/samu"
-    found: "/usr/bin/ninja-build"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja-build"
+    found: "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -165,6 +157,8 @@ events:
       - "arm-none-eabi-gcc"
     candidate_directories:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
@@ -178,13 +172,13 @@ events:
       - "/var/lib/snapd/snap/bin/"
     searched_directories:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -228,6 +222,9 @@ events:
     search_context:
       ENV{PATH}:
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
@@ -251,14 +248,36 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc 
+      Compiler: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc 
       Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fstack-usage;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fstack-usage
       Id flags:  
       
       The output was:
       1
-      /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-exit.o): in function `exit':
-      exit.c:(.text.exit+0x16): undefined reference to `_exit'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-exit.o): in function `exit':
+      (.text.exit+0x14): undefined reference to `_exit'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_exit): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-exit.o)
+      (.text.exit+0x14): dangerous relocation: unsupported relocation
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-closer.o): in function `_close_r':
+      (.text._close_r+0xc): undefined reference to `_close'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_close): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-closer.o)
+      (.text._close_r+0xc): dangerous relocation: unsupported relocation
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      (.text._lseek_r+0x14): undefined reference to `_lseek'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_lseek): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-lseekr.o)
+      (.text._lseek_r+0x14): dangerous relocation: unsupported relocation
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-readr.o): in function `_read_r':
+      (.text._read_r+0x14): undefined reference to `_read'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_read): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-readr.o)
+      (.text._read_r+0x14): dangerous relocation: unsupported relocation
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-writer.o): in function `_write_r':
+      (.text._write_r+0x14): undefined reference to `_write'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_write): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-writer.o)
+      (.text._write_r+0x14): dangerous relocation: unsupported relocation
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      (.text._sbrk_r+0xc): undefined reference to `_sbrk'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_sbrk): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-sbrkr.o)
+      (.text._sbrk_r+0xc): dangerous relocation: unsupported relocation
       collect2: error: ld returned 1 exit status
       
       
@@ -290,6 +309,9 @@ events:
     search_context:
       ENV{PATH}:
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
@@ -313,7 +335,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc 
+      Compiler: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc 
       Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fstack-usage;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fstack-usage
       Id flags: -c 
       
@@ -349,21 +371,26 @@ events:
     names:
       - "arm-none-eabi-g++"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -400,21 +427,26 @@ events:
       - "arm-none-eabi-ar"
       - "ar"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ar"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -451,21 +483,26 @@ events:
       - "arm-none-eabi-ranlib"
       - "ranlib"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -502,21 +539,26 @@ events:
       - "arm-none-eabi-strip"
       - "strip"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-strip"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-strip"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -553,21 +595,26 @@ events:
       - "arm-none-eabi-nm"
       - "nm"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-nm"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-nm"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -604,21 +651,26 @@ events:
       - "arm-none-eabi-objdump"
       - "objdump"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-objdump"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-objdump"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -655,21 +707,26 @@ events:
       - "arm-none-eabi-readelf"
       - "readelf"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-readelf"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-readelf"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -706,12 +763,14 @@ events:
       - "arm-none-eabi-dlltool"
       - "dlltool"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -719,24 +778,28 @@ events:
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
     searched_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-dlltool"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-dlltool"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-dlltool"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-dlltool"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-dlltool"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-dlltool"
       - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-dlltool"
       - "/home/fedora/.local/bin/arm-none-eabi-dlltool"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-dlltool"
       - "/home/fedora/.cargo/bin/arm-none-eabi-dlltool"
       - "/usr/local/bin/arm-none-eabi-dlltool"
       - "/usr/bin/arm-none-eabi-dlltool"
       - "/usr/local/sbin/arm-none-eabi-dlltool"
       - "/usr/sbin/arm-none-eabi-dlltool"
       - "/var/lib/snapd/snap/bin/arm-none-eabi-dlltool"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/dlltool"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/dlltool"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/dlltool"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/dlltool"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/dlltool"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/dlltool"
       - "/home/fedora/STM32_projects/zlink_test/c/dlltool"
       - "/home/fedora/.local/bin/dlltool"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/dlltool"
       - "/home/fedora/.cargo/bin/dlltool"
       - "/usr/local/bin/dlltool"
       - "/usr/bin/dlltool"
@@ -746,6 +809,9 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -782,21 +848,26 @@ events:
       - "arm-none-eabi-addr2line"
       - "addr2line"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-addr2line"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-addr2line"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -833,12 +904,14 @@ events:
       - "arm-none-eabi-tapi"
       - "tapi"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -846,24 +919,28 @@ events:
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
     searched_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-tapi"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-tapi"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-tapi"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-tapi"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-tapi"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-tapi"
       - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-tapi"
       - "/home/fedora/.local/bin/arm-none-eabi-tapi"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-tapi"
       - "/home/fedora/.cargo/bin/arm-none-eabi-tapi"
       - "/usr/local/bin/arm-none-eabi-tapi"
       - "/usr/bin/arm-none-eabi-tapi"
       - "/usr/local/sbin/arm-none-eabi-tapi"
       - "/usr/sbin/arm-none-eabi-tapi"
       - "/var/lib/snapd/snap/bin/arm-none-eabi-tapi"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/tapi"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/tapi"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/tapi"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/tapi"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/tapi"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/tapi"
       - "/home/fedora/STM32_projects/zlink_test/c/tapi"
       - "/home/fedora/.local/bin/tapi"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/tapi"
       - "/home/fedora/.cargo/bin/tapi"
       - "/usr/local/bin/tapi"
       - "/usr/bin/tapi"
@@ -873,6 +950,9 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -906,17 +986,19 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "arm-none-eabi-gcc-ar-10.3"
-      - "arm-none-eabi-gcc-ar-10"
-      - "arm-none-eabi-gcc-ar10"
+      - "arm-none-eabi-gcc-ar-14.3"
+      - "arm-none-eabi-gcc-ar-14"
+      - "arm-none-eabi-gcc-ar14"
       - "arm-none-eabi-gcc-ar"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -924,45 +1006,54 @@ events:
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
     searched_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/usr/local/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/usr/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ar-10.3"
-      - "/usr/sbin/arm-none-eabi-gcc-ar-10.3"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar-10"
-      - "/usr/local/bin/arm-none-eabi-gcc-ar-10"
-      - "/usr/bin/arm-none-eabi-gcc-ar-10"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ar-10"
-      - "/usr/sbin/arm-none-eabi-gcc-ar-10"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar-10"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar10"
-      - "/usr/local/bin/arm-none-eabi-gcc-ar10"
-      - "/usr/bin/arm-none-eabi-gcc-ar10"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ar10"
-      - "/usr/sbin/arm-none-eabi-gcc-ar10"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar10"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/usr/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar-14.3"
+      - "/usr/sbin/arm-none-eabi-gcc-ar-14.3"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar-14"
+      - "/usr/sbin/arm-none-eabi-gcc-ar-14"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar14"
+      - "/usr/sbin/arm-none-eabi-gcc-ar14"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar14"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -996,17 +1087,19 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "arm-none-eabi-gcc-ranlib-10.3"
-      - "arm-none-eabi-gcc-ranlib-10"
-      - "arm-none-eabi-gcc-ranlib10"
+      - "arm-none-eabi-gcc-ranlib-14.3"
+      - "arm-none-eabi-gcc-ranlib-14"
+      - "arm-none-eabi-gcc-ranlib14"
       - "arm-none-eabi-gcc-ranlib"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -1014,45 +1107,54 @@ events:
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
     searched_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/usr/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/usr/sbin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/usr/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-10"
-      - "/usr/sbin/arm-none-eabi-gcc-ranlib-10"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib10"
-      - "/usr/local/bin/arm-none-eabi-gcc-ranlib10"
-      - "/usr/bin/arm-none-eabi-gcc-ranlib10"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib10"
-      - "/usr/sbin/arm-none-eabi-gcc-ranlib10"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib10"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib-14"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib14"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib14"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -1089,6 +1191,8 @@ events:
       - "arm-none-eabi-g++"
     candidate_directories:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
@@ -1102,13 +1206,13 @@ events:
       - "/var/lib/snapd/snap/bin/"
     searched_directories:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-g++"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-g++"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-g++"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-g++"
-      - "/home/fedora/.local/bin/arm-none-eabi-g++"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-g++"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -1152,6 +1256,9 @@ events:
     search_context:
       ENV{PATH}:
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
@@ -1175,14 +1282,36 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-      Compiler: /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++ 
+      Compiler: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++ 
       Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fstack-usage;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fstack-usage;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
       Id flags:  
       
       The output was:
       1
-      /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-exit.o): in function `exit':
-      exit.c:(.text.exit+0x16): undefined reference to `_exit'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-exit.o): in function `exit':
+      (.text.exit+0x14): undefined reference to `_exit'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_exit): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-exit.o)
+      (.text.exit+0x14): dangerous relocation: unsupported relocation
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-closer.o): in function `_close_r':
+      (.text._close_r+0xc): undefined reference to `_close'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_close): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-closer.o)
+      (.text._close_r+0xc): dangerous relocation: unsupported relocation
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      (.text._lseek_r+0x14): undefined reference to `_lseek'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_lseek): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-lseekr.o)
+      (.text._lseek_r+0x14): dangerous relocation: unsupported relocation
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-readr.o): in function `_read_r':
+      (.text._read_r+0x14): undefined reference to `_read'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_read): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-readr.o)
+      (.text._read_r+0x14): dangerous relocation: unsupported relocation
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-writer.o): in function `_write_r':
+      (.text._write_r+0x14): undefined reference to `_write'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_write): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-writer.o)
+      (.text._write_r+0x14): dangerous relocation: unsupported relocation
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      (.text._sbrk_r+0xc): undefined reference to `_sbrk'
+      /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld: (_sbrk): Unknown destination type (ARM/Thumb) in /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-sbrkr.o)
+      (.text._sbrk_r+0xc): dangerous relocation: unsupported relocation
       collect2: error: ld returned 1 exit status
       
       
@@ -1214,6 +1343,9 @@ events:
     search_context:
       ENV{PATH}:
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
@@ -1237,7 +1369,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++ 
+      Compiler: /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++ 
       Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fstack-usage;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fstack-usage;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
       Id flags: -c 
       
@@ -1270,17 +1402,19 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "arm-none-eabi-gcc-ar-10.3"
-      - "arm-none-eabi-gcc-ar-10"
-      - "arm-none-eabi-gcc-ar10"
+      - "arm-none-eabi-gcc-ar-14.3"
+      - "arm-none-eabi-gcc-ar-14"
+      - "arm-none-eabi-gcc-ar14"
       - "arm-none-eabi-gcc-ar"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -1288,45 +1422,54 @@ events:
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
     searched_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/usr/local/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/usr/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ar-10.3"
-      - "/usr/sbin/arm-none-eabi-gcc-ar-10.3"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar-10.3"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar-10"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar-10"
-      - "/usr/local/bin/arm-none-eabi-gcc-ar-10"
-      - "/usr/bin/arm-none-eabi-gcc-ar-10"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ar-10"
-      - "/usr/sbin/arm-none-eabi-gcc-ar-10"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar-10"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar10"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar10"
-      - "/usr/local/bin/arm-none-eabi-gcc-ar10"
-      - "/usr/bin/arm-none-eabi-gcc-ar10"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ar10"
-      - "/usr/sbin/arm-none-eabi-gcc-ar10"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar10"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/usr/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar-14.3"
+      - "/usr/sbin/arm-none-eabi-gcc-ar-14.3"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar-14"
+      - "/usr/sbin/arm-none-eabi-gcc-ar-14"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar14"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar14"
+      - "/usr/sbin/arm-none-eabi-gcc-ar14"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar14"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -1360,17 +1503,19 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "arm-none-eabi-gcc-ranlib-10.3"
-      - "arm-none-eabi-gcc-ranlib-10"
-      - "arm-none-eabi-gcc-ranlib10"
+      - "arm-none-eabi-gcc-ranlib-14.3"
+      - "arm-none-eabi-gcc-ranlib-14"
+      - "arm-none-eabi-gcc-ranlib14"
       - "arm-none-eabi-gcc-ranlib"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -1378,45 +1523,54 @@ events:
       - "/usr/sbin/"
       - "/var/lib/snapd/snap/bin/"
     searched_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/usr/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/usr/sbin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib-10.3"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/usr/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-10"
-      - "/usr/sbin/arm-none-eabi-gcc-ranlib-10"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib-10"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib10"
-      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib10"
-      - "/usr/local/bin/arm-none-eabi-gcc-ranlib10"
-      - "/usr/bin/arm-none-eabi-gcc-ranlib10"
-      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib10"
-      - "/usr/sbin/arm-none-eabi-gcc-ranlib10"
-      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib10"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib-14"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib14"
+      - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib14"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -1441,8 +1595,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-sH5TD9"
-      binary: "/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-sH5TD9"
+      source: "/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-rfQv0W"
+      binary: "/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-rfQv0W"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage"
@@ -1452,46 +1606,42 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-sH5TD9'
+        Change Dir: '/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-rfQv0W'
         
-        Run Build Command(s): /usr/bin/ninja-build -v cmTC_aa61d
-        [1/2] /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage  -std=gnu11   -v -o CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj -c /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_a3814
+        [1/2] /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage  -std=gnu11   -v -o CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj -c /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c
         Using built-in specs.
-        COLLECT_GCC=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
+        COLLECT_GCC=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc
         Target: arm-none-eabi
-        Configured with: /mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/src/gcc/configure --target=arm-none-eabi --prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native --libexecdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/lib --infodir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/arm-none-eabi --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpfr=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpc=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-isl=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-libelf=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Arm Embedded Toolchain 10.3-2021.10' --with-multilib-list=rmprofile,aprofile
+        Configured with: /build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/src/gcc/configure --target=arm-none-eabi --prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native --libexecdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/lib --infodir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-checking=release --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/arm-none-eabi --with-zstd=no --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-mpfr=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-mpc=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-isl=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Tools for STM32 14.3.rel1.20251027-0700' --with-multilib-list=rmprofile,aprofile
         Thread model: single
         Supported LTO compression algorithms: zlib
-        gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp'
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -auxbase-strip CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj -Wall -std=gnu11 -version -fstack-usage -fdata-sections -ffunction-sections -fstack-usage -o /tmp/ccjk7NnE.s
-        GNU C11 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
-        	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) 
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_a3814.dir/'
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a3814.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -std=gnu11 -version -fstack-usage -fdata-sections -ffunction-sections -fstack-usage -o /tmp/cc8ss5ke.s
+        GNU C11 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)
+        	compiled by GNU C version 7.5.0, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include"
-        ignoring nonexistent directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/local/include"
-        ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include-fixed"
-        ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"
-        ignoring nonexistent directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/include"
+        ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
+        ignoring nonexistent directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/usr/local/include"
+        ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
+        ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
+        ignoring nonexistent directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/usr/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
-        GNU C11 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
-        	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
-        
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        Compiler executable checksum: ada28fdd13bdd399f195284d34df0081
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp'
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj /tmp/ccjk7NnE.s
-        GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621
-        COMPILER_PATH=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/
-        LIBRARY_PATH=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp'
-        [2/2] : && /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_aa61d.a && /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ar qc libcmTC_aa61d.a  CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj && /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib libcmTC_aa61d.a && :
+        Compiler executable checksum: 91583cfdc8b970f823bfd284aa7769b4
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_a3814.dir/'
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj /tmp/cc8ss5ke.s
+        GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616
+        COMPILER_PATH=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_a3814.a && /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_a3814.a  CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj && /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_a3814.a && :
         
       exitCode: 0
   -
@@ -1504,14 +1654,14 @@ events:
       Parsed C implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include]
-          add: [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed]
-          add: [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include]
+          add: [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+          add: [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+          add: [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         end of search list found
-        collapse include dir [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include] ==> [/usr/local/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include]
-        collapse include dir [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed] ==> [/usr/local/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed]
-        collapse include dir [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include] ==> [/usr/local/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include]
-        implicit include dirs: [/usr/local/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include;/usr/local/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed;/usr/local/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include]
+        collapse include dir [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/lib/gcc/arm-none-eabi/14.3.1/include]
+        collapse include dir [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        collapse include dir [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/arm-none-eabi/include]
+        implicit include dirs: [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/lib/gcc/arm-none-eabi/14.3.1/include;/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/lib/gcc/arm-none-eabi/14.3.1/include-fixed;/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/arm-none-eabi/include]
       
       
   -
@@ -1524,46 +1674,42 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-sH5TD9']
+        ignore line: [Change Dir: '/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-rfQv0W']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja-build -v cmTC_aa61d]
-        ignore line: [[1/2] /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage  -std=gnu11   -v -o CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj -c /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_a3814]
+        ignore line: [[1/2] /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage  -std=gnu11   -v -o CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj -c /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc]
+        ignore line: [COLLECT_GCC=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc]
         ignore line: [Target: arm-none-eabi]
-        ignore line: [Configured with: /mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/src/gcc/configure --target=arm-none-eabi --prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native --libexecdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/lib --infodir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/arm-none-eabi --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpfr=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpc=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-isl=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-libelf=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Arm Embedded Toolchain 10.3-2021.10' --with-multilib-list=rmprofile,aprofile]
+        ignore line: [Configured with: /build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/src/gcc/configure --target=arm-none-eabi --prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native --libexecdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/lib --infodir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-checking=release --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/arm-none-eabi --with-zstd=no --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-mpfr=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-mpc=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-isl=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Tools for STM32 14.3.rel1.20251027-0700' --with-multilib-list=rmprofile,aprofile]
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
-        ignore line: [gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp']
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -auxbase-strip CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj -Wall -std=gnu11 -version -fstack-usage -fdata-sections -ffunction-sections -fstack-usage -o /tmp/ccjk7NnE.s]
-        ignore line: [GNU C11 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
-        ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: [gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_a3814.dir/']
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a3814.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -std=gnu11 -version -fstack-usage -fdata-sections -ffunction-sections -fstack-usage -o /tmp/cc8ss5ke.s]
+        ignore line: [GNU C11 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include"]
-        ignore line: [ignoring nonexistent directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/local/include"]
-        ignore line: [ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include-fixed"]
-        ignore line: [ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"]
-        ignore line: [ignoring nonexistent directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/include"]
+        ignore line: [ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"]
+        ignore line: [ignoring nonexistent directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/usr/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include]
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed]
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include]
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
-        ignore line: [GNU C11 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
-        ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
-        ignore line: []
-        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [Compiler executable checksum: ada28fdd13bdd399f195284d34df0081]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp']
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj /tmp/ccjk7NnE.s]
-        ignore line: [GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621]
-        ignore line: [COMPILER_PATH=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/]
-        ignore line: [LIBRARY_PATH=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp']
-        ignore line: [[2/2] : && /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_aa61d.a && /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ar qc libcmTC_aa61d.a  CMakeFiles/cmTC_aa61d.dir/CMakeCCompilerABI.c.obj && /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib libcmTC_aa61d.a && :]
+        ignore line: [Compiler executable checksum: 91583cfdc8b970f823bfd284aa7769b4]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_a3814.dir/']
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj /tmp/cc8ss5ke.s]
+        ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616]
+        ignore line: [COMPILER_PATH=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_a3814.a && /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_a3814.a  CMakeFiles/cmTC_a3814.dir/CMakeCCompilerABI.c.obj && /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_a3814.a && :]
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -1581,8 +1727,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-YWstjo"
-      binary: "/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-YWstjo"
+      source: "/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-cQdYd7"
+      binary: "/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-cQdYd7"
     cmakeVariables:
       CMAKE_CXX_FLAGS: " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -fno-rtti -fno-exceptions -fno-threadsafe-statics"
       CMAKE_CXX_FLAGS_DEBUG: "-O0 -g3"
@@ -1593,52 +1739,48 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-YWstjo'
+        Change Dir: '/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-cQdYd7'
         
-        Run Build Command(s): /usr/bin/ninja-build -v cmTC_90d2f
-        [1/2] /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj -c /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_9586d
+        [1/2] /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj -c /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
-        COLLECT_GCC=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+        COLLECT_GCC=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++
         Target: arm-none-eabi
-        Configured with: /mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/src/gcc/configure --target=arm-none-eabi --prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native --libexecdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/lib --infodir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/arm-none-eabi --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpfr=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpc=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-isl=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-libelf=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Arm Embedded Toolchain 10.3-2021.10' --with-multilib-list=rmprofile,aprofile
+        Configured with: /build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/src/gcc/configure --target=arm-none-eabi --prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native --libexecdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/lib --infodir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-checking=release --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/arm-none-eabi --with-zstd=no --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-mpfr=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-mpc=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-isl=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Tools for STM32 14.3.rel1.20251027-0700' --with-multilib-list=rmprofile,aprofile
         Thread model: single
         Supported LTO compression algorithms: zlib
-        gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp'
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -auxbase-strip CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj -Wall -version -fstack-usage -fdata-sections -ffunction-sections -fstack-usage -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/ccOViHRj.s
-        GNU C++14 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
-        	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) 
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_9586d.dir/'
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_9586d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -version -fstack-usage -fdata-sections -ffunction-sections -fstack-usage -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/ccp95vCC.s
+        GNU C++17 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)
+        	compiled by GNU C version 7.5.0, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"
-        ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+fp/hard"
-        ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"
-        ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include"
-        ignoring nonexistent directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/local/include"
-        ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include-fixed"
-        ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"
-        ignoring nonexistent directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/include"
+        ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1"
+        ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard"
+        ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward"
+        ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
+        ignoring nonexistent directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/usr/local/include"
+        ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
+        ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
+        ignoring nonexistent directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/usr/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+fp/hard
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
-        GNU C++14 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
-        	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
-        
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        Compiler executable checksum: 62a2c0a0f0d30bb0bbe5c686601adbb0
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp'
-         /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccOViHRj.s
-        GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621
-        COMPILER_PATH=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/
-        LIBRARY_PATH=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp'
-        [2/2] : && /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_90d2f.a && /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ar qc libcmTC_90d2f.a  CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj && /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib libcmTC_90d2f.a && :
+        Compiler executable checksum: c7a0cbb4c17df2df56ed6be1c1e04844
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_9586d.dir/'
+         /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccp95vCC.s
+        GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616
+        COMPILER_PATH=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_9586d.a && /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_9586d.a  CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj && /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_9586d.a && :
         
       exitCode: 0
   -
@@ -1651,20 +1793,20 @@ events:
       Parsed CXX implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1]
-          add: [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+fp/hard]
-          add: [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward]
-          add: [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include]
-          add: [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed]
-          add: [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include]
+          add: [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
+          add: [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard]
+          add: [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
+          add: [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+          add: [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+          add: [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         end of search list found
-        collapse include dir [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1] ==> [/usr/local/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1]
-        collapse include dir [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+fp/hard] ==> [/usr/local/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+fp/hard]
-        collapse include dir [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward] ==> [/usr/local/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/backward]
-        collapse include dir [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include] ==> [/usr/local/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include]
-        collapse include dir [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed] ==> [/usr/local/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed]
-        collapse include dir [/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include] ==> [/usr/local/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include]
-        implicit include dirs: [/usr/local/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1;/usr/local/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+fp/hard;/usr/local/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/backward;/usr/local/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include;/usr/local/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed;/usr/local/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include]
+        collapse include dir [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1] ==> [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/arm-none-eabi/include/c++/14.3.1]
+        collapse include dir [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard] ==> [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard]
+        collapse include dir [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward] ==> [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/arm-none-eabi/include/c++/14.3.1/backward]
+        collapse include dir [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/lib/gcc/arm-none-eabi/14.3.1/include]
+        collapse include dir [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        collapse include dir [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/arm-none-eabi/include]
+        implicit include dirs: [/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/arm-none-eabi/include/c++/14.3.1;/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard;/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/arm-none-eabi/include/c++/14.3.1/backward;/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/lib/gcc/arm-none-eabi/14.3.1/include;/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/lib/gcc/arm-none-eabi/14.3.1/include-fixed;/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/arm-none-eabi/include]
       
       
   -
@@ -1677,55 +1819,51 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-YWstjo']
+        ignore line: [Change Dir: '/home/fedora/STM32_projects/zlink_test/build/Debug/CMakeFiles/CMakeScratch/TryCompile-cQdYd7']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja-build -v cmTC_90d2f]
-        ignore line: [[1/2] /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj -c /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_9586d]
+        ignore line: [[1/2] /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj -c /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++]
+        ignore line: [COLLECT_GCC=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++]
         ignore line: [Target: arm-none-eabi]
-        ignore line: [Configured with: /mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/src/gcc/configure --target=arm-none-eabi --prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native --libexecdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/lib --infodir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/arm-none-eabi --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpfr=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpc=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-isl=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-libelf=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Arm Embedded Toolchain 10.3-2021.10' --with-multilib-list=rmprofile,aprofile]
+        ignore line: [Configured with: /build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/src/gcc/configure --target=arm-none-eabi --prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native --libexecdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/lib --infodir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-checking=release --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-native/arm-none-eabi --with-zstd=no --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-mpfr=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-mpc=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-isl=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Tools for STM32 14.3.rel1.20251027-0700' --with-multilib-list=rmprofile,aprofile]
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
-        ignore line: [gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp']
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -auxbase-strip CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj -Wall -version -fstack-usage -fdata-sections -ffunction-sections -fstack-usage -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/ccOViHRj.s]
-        ignore line: [GNU C++14 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
-        ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: [gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_9586d.dir/']
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_9586d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -version -fstack-usage -fdata-sections -ffunction-sections -fstack-usage -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/ccp95vCC.s]
+        ignore line: [GNU C++17 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"]
-        ignore line: [ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+fp/hard"]
-        ignore line: [ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"]
-        ignore line: [ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include"]
-        ignore line: [ignoring nonexistent directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/local/include"]
-        ignore line: [ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include-fixed"]
-        ignore line: [ignoring duplicate directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"]
-        ignore line: [ignoring nonexistent directory "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/include"]
+        ignore line: [ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1"]
+        ignore line: [ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard"]
+        ignore line: [ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward"]
+        ignore line: [ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"]
+        ignore line: [ignoring nonexistent directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/usr/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1]
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+fp/hard]
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward]
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include]
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed]
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include]
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard]
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
-        ignore line: [GNU C++14 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
-        ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
-        ignore line: []
-        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [Compiler executable checksum: 62a2c0a0f0d30bb0bbe5c686601adbb0]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp']
-        ignore line: [ /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccOViHRj.s]
-        ignore line: [GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621]
-        ignore line: [COMPILER_PATH=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/]
-        ignore line: [LIBRARY_PATH=/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp']
-        ignore line: [[2/2] : && /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_90d2f.a && /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ar qc libcmTC_90d2f.a  CMakeFiles/cmTC_90d2f.dir/CMakeCXXCompilerABI.cpp.obj && /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib libcmTC_90d2f.a && :]
+        ignore line: [Compiler executable checksum: c7a0cbb4c17df2df56ed6be1c1e04844]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_9586d.dir/']
+        ignore line: [ /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccp95vCC.s]
+        ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616]
+        ignore line: [COMPILER_PATH=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/:/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-fstack-usage' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fstack-usage' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_9586d.a && /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_9586d.a  CMakeFiles/cmTC_9586d.dir/CMakeCXXCompilerABI.cpp.obj && /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_9586d.a && :]
         ignore line: []
         ignore line: []
-        linker tool for 'CXX': [1/2] /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+        linker tool for 'CXX': [1/2] /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -1740,7 +1878,7 @@ events:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:28 (project)"
     message: |
-      Running the CXX compiler's linker: "[1/2] /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++" "-v"
+      Running the CXX compiler's linker: "[1/2] /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++" "-v"
       
   -
     kind: "message-v1"
@@ -1750,7 +1888,7 @@ events:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:28 (project)"
     message: |
-      Running the CXX compiler's linker: "[1/2] /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++" "-V"
+      Running the CXX compiler's linker: "[1/2] /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++" "-V"
       
   -
     kind: "message-v1"
@@ -1760,7 +1898,7 @@ events:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:28 (project)"
     message: |
-      Running the CXX compiler's linker: "[1/2] /usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++" "--version"
+      Running the CXX compiler's linker: "[1/2] /home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++" "--version"
       
   -
     kind: "find-v1"
@@ -1783,6 +1921,8 @@ events:
       - "arm-none-eabi-gcc"
     candidate_directories:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
@@ -1797,13 +1937,13 @@ events:
       - "/bin/"
     searched_directories:
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc"
-      - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc"
-      - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc"
-      - "/home/fedora/.local/bin/arm-none-eabi-gcc"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -1830,8 +1970,8 @@ events:
       - "CMakeLists.txt:32 (enable_language)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
-      arm-none-eabi-gcc (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
-      Copyright (C) 2020 Free Software Foundation, Inc.
+      arm-none-eabi-gcc (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623
+      Copyright (C) 2024 Free Software Foundation, Inc.
       This is free software; see the source for copying conditions.  There is NO
       warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
       
@@ -1858,12 +1998,14 @@ events:
       - "arm-none-eabi-gcc-ar"
       - "arm-none-eabi-gcc-ar"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -1872,12 +2014,14 @@ events:
       - "/var/lib/snapd/snap/bin/"
       - "/bin/"
     searched_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar-"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar-"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-"
       - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar-"
       - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-"
       - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar-"
       - "/usr/local/bin/arm-none-eabi-gcc-ar-"
       - "/usr/bin/arm-none-eabi-gcc-ar-"
@@ -1885,12 +2029,14 @@ events:
       - "/usr/sbin/arm-none-eabi-gcc-ar-"
       - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar-"
       - "/bin/arm-none-eabi-gcc-ar-"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar-"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ar-"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-"
       - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ar-"
       - "/home/fedora/.local/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar-"
       - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ar-"
       - "/usr/local/bin/arm-none-eabi-gcc-ar-"
       - "/usr/bin/arm-none-eabi-gcc-ar-"
@@ -1898,9 +2044,12 @@ events:
       - "/usr/sbin/arm-none-eabi-gcc-ar-"
       - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ar-"
       - "/bin/arm-none-eabi-gcc-ar-"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"
@@ -1942,12 +2091,14 @@ events:
       - "arm-none-eabi-gcc-ranlib"
       - "arm-none-eabi-gcc-ranlib"
     candidate_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/"
       - "/home/fedora/STM32_projects/zlink_test/c/"
       - "/home/fedora/.local/bin/"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/"
       - "/home/fedora/.cargo/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -1956,12 +2107,14 @@ events:
       - "/var/lib/snapd/snap/bin/"
       - "/bin/"
     searched_directories:
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib-"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib-"
       - "/usr/local/bin/arm-none-eabi-gcc-ranlib-"
       - "/usr/bin/arm-none-eabi-gcc-ranlib-"
@@ -1969,12 +2122,14 @@ events:
       - "/usr/sbin/arm-none-eabi-gcc-ranlib-"
       - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib-"
       - "/bin/arm-none-eabi-gcc-ranlib-"
-      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-"
+      - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/arm-none-eabi-gcc-ranlib-"
+      - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/STM32_projects/zlink_test/c/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/.local/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/fedora/.cargo/bin/arm-none-eabi-gcc-ranlib-"
       - "/usr/local/bin/arm-none-eabi-gcc-ranlib-"
       - "/usr/bin/arm-none-eabi-gcc-ranlib-"
@@ -1982,9 +2137,12 @@ events:
       - "/usr/sbin/arm-none-eabi-gcc-ranlib-"
       - "/var/lib/snapd/snap/bin/arm-none-eabi-gcc-ranlib-"
       - "/bin/arm-none-eabi-gcc-ranlib-"
-    found: "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib"
+    found: "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib"
     search_context:
       ENV{PATH}:
+        - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin"
+        - "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin"
         - "/home/fedora/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.45.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/fedora/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.3.0-linux-x64/resources/binaries/linux/x86_64"

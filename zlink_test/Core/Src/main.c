@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,7 +44,10 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+char check_position[9]="#001PRAD!";
+char release_torque[9]="#255PULK!";
+char command[]="#005P0500T0000!";
+char currrent_position[10]={};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -90,6 +93,7 @@ int main(void)
   MX_UART4_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  HAL_UART_Transmit(&huart4,(uint8_t*)release_torque,sizeof(release_torque),2);
 
   /* USER CODE END 2 */
 
@@ -98,7 +102,18 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    HAL_UART_Transmit(&huart4,(uint8_t*)check_position,sizeof(check_position),2);
+    HAL_UART_Receive(&huart4,(uint8_t*)currrent_position,sizeof(currrent_position),6);
+    printf("%s\r\n",currrent_position);
+    for(uint8_t i=5,j=5;i<=8;i++,j++)
+    {
+      command[i]=currrent_position[j];
+    }
+    if(command[5]==2 && command[6]==5)
+    {continue;}
+    else
+    {HAL_UART_Transmit(&huart4,(uint8_t*)command,sizeof(command),2);}
+    //HAL_Delay(100);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -146,7 +161,14 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+/*串口打印*/
+int _write(int file,char *ptr,int len)
+{
+  if(HAL_UART_Transmit(&huart1,(uint8_t*)ptr,len,HAL_MAX_DELAY)!=HAL_OK)
+  {return -1;}
+  
+  return len;
+}
 /* USER CODE END 4 */
 
 /**
