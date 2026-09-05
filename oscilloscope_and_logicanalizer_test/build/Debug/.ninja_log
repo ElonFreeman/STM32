@@ -1,0 +1,25 @@
+# ninja log v7
+2	10	1788496164329681332	CMakeFiles/oscilloscope_and_logicanalizer_test.dir/startup_stm32f407xx.s.obj	8f9cd5904342e2b9
+2	29	1788496164329392818	CMakeFiles/oscilloscope_and_logicanalizer_test.dir/Core/Src/sysmem.c.obj	e0ca7b5e6c5011ea
+2	46	1788496164329545980	CMakeFiles/oscilloscope_and_logicanalizer_test.dir/Core/Src/syscalls.c.obj	4c66336b76c9269
+1	121	1788497262253023280	CMakeFiles/oscilloscope_and_logicanalizer_test.dir/Core/Src/stm32f4xx_hal_msp.c.obj	362c6ade5a5bd9bb
+1	103	1788497262252868930	CMakeFiles/oscilloscope_and_logicanalizer_test.dir/Core/Src/stm32f4xx_it.c.obj	bda8007bed387fd
+2	91	1788497262254132219	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj	557df62fee74e8b9
+1	94	1788497262253170505	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj	6466e3b706358f55
+4	121	1788497262255706582	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj	8ec2f491e9a916ae
+3	98	1788497262254928899	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj	99a7b602a507f6e3
+3	103	1788497262255142613	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj	69a191f089f12ca1
+2	129	1788497262253513635	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj	e90ef6b60a76934e
+2	109	1788497262253732099	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj	7e57a793f061df0e
+3	118	1788497262254684315	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj	352b14093b7fd81a
+4	127	1788497262255334956	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj	87a2e46c9c273e94
+1	110	1788497262253308232	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj	6823aa1cd80432a0
+3	119	1788497262254351870	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj	596590f3aed9deba
+1	127	1788497262251315800	CMakeFiles/oscilloscope_and_logicanalizer_test.dir/Core/Src/main.c.obj	af687fdca0fdc1a5
+2	123	1788497262253932753	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj	1d9ba06e3d8ef9ea
+4	99	1788497262255545108	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj	22bc7fcfe3182973
+3	122	1788497262254521654	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj	dbdd15d6116128ea
+1	35	1788497293198926736	oscilloscope_and_logicanalizer_test.elf	ec727631e3c84d75
+0	24	1788611648279811191	build.ninja	b3367ca48211765
+0	24	1788611648278640512	/home/fedora/STM32_projects/oscilloscope_and_logicanalizer_test/build/Debug/cmake_install.cmake	b3367ca48211765
+0	24	1788611648279365953	/home/fedora/STM32_projects/oscilloscope_and_logicanalizer_test/build/Debug/cmake/stm32cubemx/cmake_install.cmake	b3367ca48211765

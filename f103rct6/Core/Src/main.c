@@ -44,9 +44,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-char check_position[9]="#004PRAD!";
+char check_position[9]="#005PRAD!";
 char release_torque[9]="#255PULK!";
-char command[]="#005P0500T0000!";
+char command[]="#006P0500T0000!";
 char currrent_position[10]={};
 /* USER CODE END PV */
 
@@ -107,12 +107,14 @@ int main(void)
     {
       command[i]=currrent_position[j];
     }
-    /*if((command[5]=='2' && command[6]=='5') || (command[5]=='0' && command[6]=='5'))//
-    {continue;}
-    else
-    {HAL_UART_Transmit(&huart4,(uint8_t*)command,sizeof(command),2);}
     
-    */
+    HAL_UART_Transmit(&huart4,(uint8_t*)command,sizeof(command),2);
+    /*if(command[6]<='9' && command[6]>='5')
+    {command[6]++;}
+    else
+    {command[6]='5';}*/
+    
+    
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
