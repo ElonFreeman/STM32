@@ -1,7 +1,7 @@
-set(CMAKE_C_COMPILER "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc")
+set(CMAKE_C_COMPILER "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
-set(CMAKE_C_COMPILER_VERSION "10.3.1")
+set(CMAKE_C_COMPILER_VERSION "14.3.1")
 set(CMAKE_C_COMPILER_VERSION_INTERNAL "")
 set(CMAKE_C_COMPILER_WRAPPER "")
 set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "17")
@@ -24,11 +24,11 @@ set(CMAKE_C_COMPILER_ARCHITECTURE_ID "armv7")
 
 
 
-set(CMAKE_AR "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ar")
-set(CMAKE_C_COMPILER_AR "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar")
-set(CMAKE_RANLIB "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib")
-set(CMAKE_C_COMPILER_RANLIB "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib")
-set(CMAKE_LINKER "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++")
+set(CMAKE_AR "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar")
+set(CMAKE_C_COMPILER_AR "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ar")
+set(CMAKE_RANLIB "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib")
+set(CMAKE_C_COMPILER_RANLIB "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib")
+set(CMAKE_LINKER "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
 set(CMAKE_C_COMPILER_LINKER "NOTFOUND")
@@ -79,7 +79,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/usr/local/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include;/usr/local/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed;/usr/local/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/lib/gcc/arm-none-eabi/14.3.1/include;/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/lib/gcc/arm-none-eabi/14.3.1/include-fixed;/home/fedora/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/arm-none-eabi/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

@@ -20,6 +20,6 @@
 4	99	1788497262255545108	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj	22bc7fcfe3182973
 3	122	1788497262254521654	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj	dbdd15d6116128ea
 1	35	1788497293198926736	oscilloscope_and_logicanalizer_test.elf	ec727631e3c84d75
-0	24	1788611648279811191	build.ninja	b3367ca48211765
-0	24	1788611648278640512	/home/fedora/STM32_projects/oscilloscope_and_logicanalizer_test/build/Debug/cmake_install.cmake	b3367ca48211765
-0	24	1788611648279365953	/home/fedora/STM32_projects/oscilloscope_and_logicanalizer_test/build/Debug/cmake/stm32cubemx/cmake_install.cmake	b3367ca48211765
+0	24	1788611680754736353	build.ninja	b3367ca48211765
+0	24	1788611680752891705	/home/fedora/STM32_projects/oscilloscope_and_logicanalizer_test/build/Debug/cmake_install.cmake	b3367ca48211765
+0	24	1788611680754128454	/home/fedora/STM32_projects/oscilloscope_and_logicanalizer_test/build/Debug/cmake/stm32cubemx/cmake_install.cmake	b3367ca48211765
