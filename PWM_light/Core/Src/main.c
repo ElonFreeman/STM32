@@ -98,17 +98,18 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
     for(int32_t duty=0;duty<=(int32_t)htim1.Init.Period;duty+=300)
     {
       __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty);
-      HAL_Delay(5);
+      HAL_Delay(1);
     }
     for(int32_t duty=(int32_t)htim1.Init.Period;duty>=0;duty-=300)
     {
       __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty);
-      HAL_Delay(5);
+      HAL_Delay(1);
     }
+    /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -140,7 +141,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV4;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
