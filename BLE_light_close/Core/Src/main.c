@@ -48,7 +48,7 @@
 /* USER CODE BEGIN PV */
 char commands[2]="IN";
 enum LIGHT_STATUS{LIGHT_ON,LIGHT_OFF,INIT} light_status=INIT;
-int16_t duty1=0,duty2=0;
+int16_t duty_init=3100,duty1=0,duty2=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -98,7 +98,11 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
   __HAL_UART_ENABLE_IT(&huart3,UART_IT_IDLE);
+
+  __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty_init);
+  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2,duty_init);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -129,12 +133,14 @@ int main(void)
       {
         case LIGHT_ON : duty1=1,duty2=2; break;
         case LIGHT_OFF : duty1=1,duty2=2; break;
+        case INIT : ; break;
+        default : ;
       }
 
       __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty1);
       __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2,duty2);
       
-      commands[0]="",commands[1]="";
+      commands[0]='I',commands[1]='N';
     }
     
     
