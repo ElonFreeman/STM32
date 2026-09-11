@@ -47,10 +47,8 @@
 
 /* USER CODE BEGIN PV */
 char commands[2]="IN";
-enum LIGHT_STATUS{LIGHT_ON,LIGHT_OFF,INIT} light_status;
-enum ACTUATION{TURN_ON,TURN_OFF} actuation;
-
-
+enum LIGHT_STATUS{LIGHT_ON,LIGHT_OFF,INIT} light_status=INIT;
+int16_t duty1=0,duty2=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -97,6 +95,7 @@ int main(void)
   MX_TIM1_Init();
   MX_USART3_UART_Init();
   MX_USART2_UART_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
   __HAL_UART_ENABLE_IT(&huart3,UART_IT_IDLE);
@@ -107,22 +106,36 @@ int main(void)
   while (1)
   {
     
-    HAL_StatusTypeDef status=HAL_UARTEx_ReceiveToIdle_DMA(&huart3, (uint8_t*)commands, sizeof(commands));
-    
-
-    HAL_UART_Transmit(&huart2,(uint8_t*)status,sizeof(status),1);
+    if(HAL_UARTEx_ReceiveToIdle_DMA(&huart3, (uint8_t*)commands, sizeof(commands))==HAL_OK)
+    {
       if(!strcmp(commands,"ON"))
       {
         HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_RESET);
         HAL_Delay(1);
         HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_SET);
+
+        light_status=LIGHT_ON;
       }
       else if(!strcmp(commands,"OF"))
       {
         HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,GPIO_PIN_RESET);
         HAL_Delay(1);
         HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,GPIO_PIN_SET);
+
+        light_status=LIGHT_OFF;
       }
+
+      switch(light_status)
+      {
+        case LIGHT_ON : duty1=1,duty2=2; break;
+        case LIGHT_OFF : duty1=1,duty2=2; break;
+      }
+
+      __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty1);
+      __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2,duty2);
+      
+      commands[0]="",commands[1]="";
+    }
     
     
     /* USER CODE END WHILE */

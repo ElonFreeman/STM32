@@ -100,12 +100,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    for(int32_t duty=500;duty<=3000;duty++)
+    for(int32_t duty=0;duty<=6000;duty++)
     {
       __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty);
       HAL_Delay(0);
     }
-    for(int32_t duty=3000;duty>=500;duty--)
+    for(int32_t duty=6000;duty>=0;duty--)
     {
       __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty);
       HAL_Delay(0);
