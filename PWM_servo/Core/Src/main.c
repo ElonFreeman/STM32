@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "cmsis_os.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -51,7 +50,6 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -94,28 +92,20 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);  //off:2000 on:
+  __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,4500);
   /* USER CODE END 2 */
-
-  /* Init scheduler */
-  osKernelInitialize();  /* Call init function for freertos objects (in cmsis_os2.c) */
-  MX_FREERTOS_Init();
-
-  /* Start scheduler */
-  osKernelStart();
-
-  /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    for(int32_t duty=500;duty<=6000;duty++)
+    for(int32_t duty=500;duty<=3000;duty++)
     {
       __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty);
       HAL_Delay(0);
     }
-    for(int32_t duty=6000;duty>=500;duty--)
+    for(int32_t duty=3000;duty>=500;duty--)
     {
       __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty);
       HAL_Delay(0);

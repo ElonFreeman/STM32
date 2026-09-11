@@ -13,7 +13,7 @@
                 "interface/cmsis-dap.cfg",
                 "target/stm32f1x.cfg"
             ],
-            "gdbPath": "/usr/local/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb",
+            "gdbPath": "/usr/bin/arm-none-eabi-gdb",
             "svdFile": "${workspaceFolder}/.vscode/STM32F103xx.svd"
         }
     ]

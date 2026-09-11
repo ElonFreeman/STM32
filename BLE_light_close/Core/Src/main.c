@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "cmsis_os.h"
 #include "dma.h"
 #include "tim.h"
 #include "usart.h"
@@ -26,7 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,12 +46,15 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+char commands[2]="IN";
+enum LIGHT_STATUS{LIGHT_ON,LIGHT_OFF,INIT} light_status;
+enum ACTUATION{TURN_ON,TURN_OFF} actuation;
+
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -94,23 +96,35 @@ int main(void)
   MX_DMA_Init();
   MX_TIM1_Init();
   MX_USART3_UART_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
+  __HAL_UART_ENABLE_IT(&huart3,UART_IT_IDLE);
   /* USER CODE END 2 */
-
-  /* Init scheduler */
-  osKernelInitialize();  /* Call init function for freertos objects (in cmsis_os2.c) */
-  MX_FREERTOS_Init();
-
-  /* Start scheduler */
-  osKernelStart();
-
-  /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    
+    HAL_StatusTypeDef status=HAL_UARTEx_ReceiveToIdle_DMA(&huart3, (uint8_t*)commands, sizeof(commands));
+    
+
+    HAL_UART_Transmit(&huart2,(uint8_t*)status,sizeof(status),1);
+      if(!strcmp(commands,"ON"))
+      {
+        HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_RESET);
+        HAL_Delay(1);
+        HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_SET);
+      }
+      else if(!strcmp(commands,"OF"))
+      {
+        HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,GPIO_PIN_RESET);
+        HAL_Delay(1);
+        HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,GPIO_PIN_SET);
+      }
+    
+    
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -155,7 +169,13 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+{
+    if (huart->Instance == USART3)
+    {
+        
+    }
+}
 /* USER CODE END 4 */
 
 /**

@@ -22,11 +22,12 @@
 #include "task.h"
 #include "main.h"
 #include "cmsis_os.h"
-#include "usart.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "string.h"
+#include "tim.h"
+#include "usart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,8 +47,12 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-char commands[12]="";
+extern commands;
+char IllegalCommand[]="ILLEAGAL_COMMAND";
+char lable[]="ON";
+
 enum LIGHT_STATUS {LIGHT_ON=1,LIGHT_OFF=0} light_status;
+enum ACTUATION {TURN_ON=1,TURN_OFF=0,INIT=-1} actuation=INIT;
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -168,13 +173,28 @@ void StartBT_Transfer(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    HAL_UART_Receive_DMA(&huart3,(uint8_t*)commands,sizeof(commands));
+    HAL_UART_Receive(&huart3,(uint8_t*)commands,sizeof(commands),3);
+
+    if(!strcmp(commands,"LIGHT_ON"))
+    {
+      light_status=LIGHT_ON;
+      HAL_UART_Transmit(&huart2,(uint8_t*)lable,sizeof(lable),2);
+    }
+    else if(!strcmp(commands,"LIGHT_OFF"))
+    {
+      light_status=LIGHT_OFF;
+    }
+    else
+    {
+      //HAL_UART_Transmit(&huart3,(uint8_t*)IllegalCommand,sizeof(IllegalCommand),3);
+    }
 
     switch (light_status)
     {
-      case LIGHT_ON : ; break;
-      case LIGHT_OFF : ; break;
+      case LIGHT_ON : actuation=TURN_ON; break;
+      case LIGHT_OFF : actuation-TURN_OFF; break;
     }
+
     osDelay(1);
   }
   /* USER CODE END StartBT_Transfer */
@@ -193,6 +213,17 @@ void Start_Servo_Drive(void *argument)
   /* Infinite loop */
   for(;;)
   {
+    uint32_t duty=0;
+
+    switch(actuation)
+    {
+      case TURN_ON : duty=0; break;
+      case TURN_OFF : duty=0; break;
+    }
+
+    
+
+    //__HAL_TIM_SetCompare(&htim1,TIM_CHANNEL_1,duty);
     osDelay(1);
   }
   /* USER CODE END Start_Servo_Drive */
