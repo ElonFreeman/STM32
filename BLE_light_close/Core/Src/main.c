@@ -101,6 +101,7 @@ int main(void)
   HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
   __HAL_UART_ENABLE_IT(&huart3,UART_IT_IDLE);
 
+  //init servos
   __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty_init);
   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2,duty_init);
   /* USER CODE END 2 */
