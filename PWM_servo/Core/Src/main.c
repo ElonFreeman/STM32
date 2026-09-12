@@ -93,7 +93,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);  //off:2000 on:
-  __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,800);  //minimum position
+  __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,3800);  //actuation position
   /* USER CODE END 2 */
 
   /* Infinite loop */

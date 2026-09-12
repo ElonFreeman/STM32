@@ -46,9 +46,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-char commands[2]="IN";
+char commands[2]="IT";
 enum LIGHT_STATUS{LIGHT_ON,LIGHT_OFF,INIT} light_status=INIT;
-int16_t duty_init=3100,duty1=0,duty2=0;
+int16_t duty_init=3250,duty1=0,duty2=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -101,39 +101,42 @@ int main(void)
   HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
   __HAL_UART_ENABLE_IT(&huart3,UART_IT_IDLE);
 
-  //init servos
-  __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty_init);
-  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2,duty_init);
+  
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+  //init servos
+  __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty_init);
+  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2,duty_init);
+
   while (1)
   {
     
-    if(HAL_UARTEx_ReceiveToIdle_DMA(&huart3, (uint8_t*)commands, sizeof(commands))==HAL_OK)
-    {
-      if(!strcmp(commands,"ON"))
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart3, (uint8_t*)commands, sizeof(commands));
+    
+      if(commands[1]=='N')
       {
-        HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_RESET);
-        HAL_Delay(1);
-        HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_SET);
+        // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_RESET);
+        // HAL_Delay(1);
+        // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_SET);
 
         light_status=LIGHT_ON;
       }
-      else if(!strcmp(commands,"OF"))
+      else if(commands[1]=='F')
       {
-        HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,GPIO_PIN_RESET);
-        HAL_Delay(1);
-        HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,GPIO_PIN_SET);
+        // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,GPIO_PIN_RESET);
+        // HAL_Delay(1);
+        // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,GPIO_PIN_SET);
 
         light_status=LIGHT_OFF;
       }
 
       switch(light_status)
       {
-        case LIGHT_ON : duty1=1,duty2=2; break;
-        case LIGHT_OFF : duty1=1,duty2=2; break;
+        case LIGHT_ON : duty1=2700,duty2=3800; break;
+        case LIGHT_OFF : duty1=3800,duty2=2700; break;
         case INIT : ; break;
         default : ;
       }
@@ -141,8 +144,8 @@ int main(void)
       __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty1);
       __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2,duty2);
       
-      commands[0]='I',commands[1]='N';
-    }
+      //commands[0]='I',commands[1]='T';
+    
     
     
     /* USER CODE END WHILE */

@@ -1,0 +1,9 @@
+/*edge position*/
+__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,5150);  //maximum position
+__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,3250);  //middle position
+__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,800);  //minimum position
+
+
+/*actuation position*/
+__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,2700);  //release position
+__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,3800);  //moveon position
