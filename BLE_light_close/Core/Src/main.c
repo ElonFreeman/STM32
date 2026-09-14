@@ -118,18 +118,10 @@ int main(void)
     
       if(commands[1]=='N')
       {
-        // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_RESET);
-        // HAL_Delay(1);
-        // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_SET);
-
         light_status=LIGHT_ON;
       }
       else if(commands[1]=='F')
       {
-        // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,GPIO_PIN_RESET);
-        // HAL_Delay(1);
-        // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,GPIO_PIN_SET);
-
         light_status=LIGHT_OFF;
       }
 
@@ -143,6 +135,8 @@ int main(void)
 
       __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty1);
       __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2,duty2);
+
+      
       
       //commands[0]='I',commands[1]='T';
     
@@ -192,13 +186,13 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
-{
-    if (huart->Instance == USART3)
-    {
+// void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+// {
+//     if (huart->Instance == USART3)
+//     {
         
-    }
-}
+//     }
+// }
 /* USER CODE END 4 */
 
 /**
