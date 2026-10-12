@@ -21,7 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "icm20948.h"
+#include "stm32f1xx_hal_uart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,19 +46,128 @@ CAN_HandleTypeDef hcan;
 I2C_HandleTypeDef hi2c1;
 
 UART_HandleTypeDef huart1;
+DMA_HandleTypeDef hdma_usart1_tx;
 
 /* USER CODE BEGIN PV */
-uint8_t who_am_i=0x0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_CAN_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
+void init_icm20948()
+{
+   //whoami
+    uint8_t who_am_i=0x00;
+    HAL_I2C_Mem_Read(
+      &hi2c1,
+      ICM20948_ADDR_HAL,
+      ICM_REG_WHO_AM_I,
+      I2C_MEMADD_SIZE_8BIT,
+      &who_am_i,
+      sizeof(who_am_i),
+      2); //who_am_i will be 0xEA
 
+    //reset
+    uint8_t reset=ICM_PWR_DEVICE_RESET;
+    HAL_I2C_Mem_Write(
+      &hi2c1,
+      ICM20948_ADDR_HAL,
+      ICM_REG_PWR_MGMT_1,
+      I2C_MEMADD_SIZE_8BIT,
+      &reset,
+      sizeof(reset),
+      1);
+    HAL_Delay(50);
+
+    //wakeup&select tim
+    uint8_t pwr=ICM_CLKSEL_AUTO;
+    HAL_I2C_Mem_Write(
+      &hi2c1,
+      ICM20948_ADDR_HAL,
+      ICM_REG_PWR_MGMT_1,
+      I2C_MEMADD_SIZE_8BIT,
+      &pwr,
+      sizeof(pwr),
+      1);
+      HAL_Delay(50);
+
+    //switch to bank2
+    uint8_t bank2=ICM_BANK_2;
+    HAL_I2C_Mem_Write(
+      &hi2c1,
+      ICM20948_ADDR_HAL,
+      ICM_REG_REG_BANK_SEL,
+      I2C_MEMADD_SIZE_8BIT,
+      &bank2,sizeof(bank2),
+      1);
+
+    //setup gyroscope&accelerometer
+    uint8_t gyro_cfg=ICM_GYRO_FS_2000DPS        // 量程 ±2000dps
+         | ICM_GYRO_DLPF_BW_51HZ      // 带宽 51.2Hz
+         | ICM_GYRO_FCHOICE_ENABLE;   // 启用 DLPF
+    HAL_I2C_Mem_Write(
+      &hi2c1,
+      ICM20948_ADDR_HAL,
+      ICM_REG_GYRO_CONFIG_1,
+      I2C_MEMADD_SIZE_8BIT,
+      &gyro_cfg,
+      sizeof(gyro_cfg),
+      1);
+    uint8_t accel_cfg= ICM_ACCEL_FS_4G               // 量程 ±4g
+          | ICM_ACCEL_DLPF_BW_50HZ        // 带宽 50.4Hz
+          | ICM_ACCEL_FCHOICE_ENABLE;     // 启用 DLPF
+    HAL_I2C_Mem_Write(
+      &hi2c1,
+      ICM20948_ADDR_HAL,
+      ICM_REG_ACCEL_CONFIG,
+      I2C_MEMADD_SIZE_8BIT,
+      &accel_cfg,
+      sizeof(accel_cfg),
+      1);
+
+    //switch back to bank0
+    uint8_t bank0=ICM_BANK_0;
+    HAL_I2C_Mem_Write(
+      &hi2c1,
+      ICM20948_ADDR_HAL,
+      ICM_REG_REG_BANK_SEL,
+      I2C_MEMADD_SIZE_8BIT,
+      &bank0,
+      sizeof(bank0),
+      1);
+}
+
+void read_icm20948_data(int16_t *ax,int16_t *ay,int16_t *az,
+                        int16_t *gx,int16_t *gy,int16_t *gz,
+                        int16_t *temp)
+{
+  uint8_t raw[14];
+  HAL_I2C_Mem_Read(
+    &hi2c1,
+    ICM20948_ADDR_HAL,
+    ICM_REG_ACCEL_XOUT_H,
+    I2C_MEMADD_SIZE_8BIT,
+    raw,
+    sizeof(raw),
+    10);
+
+
+    *ax = (int16_t)((raw[0] << 8) | raw[1]);
+    *ay = (int16_t)((raw[2] << 8) | raw[3]);
+    *az = (int16_t)((raw[4] << 8) | raw[5]);
+
+    *gx = (int16_t)((raw[6] << 8) | raw[7]);
+    *gy = (int16_t)((raw[8] << 8) | raw[9]);
+    *gz = (int16_t)((raw[10] << 8) | raw[11]);
+
+    *temp = (int16_t)((raw[12] << 8) | raw[13]);
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -94,21 +204,38 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_CAN_Init();
   MX_I2C1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  init_icm20948();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    //通信链路验证
-    HAL_I2C_Mem_Read(&hi2c1,(0x68 << 1),0x00,I2C_MEMADD_SIZE_8BIT,&who_am_i,sizeof(who_am_i),2);
+    int16_t ax=0,ay=0,az=0,gx=0,gy=0,gz=0,temp=0;
+    read_icm20948_data(&ax,&ay,&az,
+                       &gx,&gy,&gz,
+                       &temp);
 
-    //HAL_I2C_Mem_Write(&hi2c1,(0x68 << 1),);
+    // ±4g → 8192 LSB/g
+    // ±2000dps → 16.4 LSB/(°/s)
+    // 温度 → 温度(°C) = raw/333.87 + 21
+
+    float ax_g = ax / 8192.0f;
+    float ay_g = ay / 8192.0f;
+    float az_g = az / 8192.0f;
+
+    float gx_dps = gx / 16.4f;
+    float gy_dps = gy / 16.4f;
+    float gz_dps = gz / 16.4f;
+
+    float temp_c = temp / 333.87f + 21.0f;
+
+    HAL_UART_Transmit(&huart1, (uint8_t*)temp, sizeof(temp),2);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -253,6 +380,22 @@ static void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel4_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel4_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel4_IRQn);
 
 }
 
