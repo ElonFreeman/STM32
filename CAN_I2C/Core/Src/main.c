@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "icm20948.h"
 #include "stm32f1xx_hal_uart.h"
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +47,7 @@ CAN_HandleTypeDef hcan;
 I2C_HandleTypeDef hi2c1;
 
 UART_HandleTypeDef huart1;
+UART_HandleTypeDef huart2;
 DMA_HandleTypeDef hdma_usart1_tx;
 
 /* USER CODE BEGIN PV */
@@ -59,6 +61,7 @@ static void MX_DMA_Init(void);
 static void MX_CAN_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 void init_icm20948()
 {
@@ -83,7 +86,7 @@ void init_icm20948()
       &reset,
       sizeof(reset),
       1);
-    HAL_Delay(50);
+    HAL_Delay(5);
 
     //wakeup&select tim
     uint8_t pwr=ICM_CLKSEL_AUTO;
@@ -95,7 +98,7 @@ void init_icm20948()
       &pwr,
       sizeof(pwr),
       1);
-      HAL_Delay(50);
+    HAL_Delay(5);
 
     //switch to bank2
     uint8_t bank2=ICM_BANK_2;
@@ -119,6 +122,7 @@ void init_icm20948()
       &gyro_cfg,
       sizeof(gyro_cfg),
       1);
+      HAL_Delay(1);
     uint8_t accel_cfg= ICM_ACCEL_FS_4G               // 量程 ±4g
           | ICM_ACCEL_DLPF_BW_50HZ        // 带宽 50.4Hz
           | ICM_ACCEL_FCHOICE_ENABLE;     // 启用 DLPF
@@ -168,6 +172,26 @@ void read_icm20948_data(int16_t *ax,int16_t *ay,int16_t *az,
 
     *temp = (int16_t)((raw[12] << 8) | raw[13]);
 }
+
+void read_icm20948_data_arr(int16_t *arr[])
+{
+  uint8_t raw[14];
+  HAL_I2C_Mem_Read(
+    &hi2c1,
+    ICM20948_ADDR_HAL,
+    ICM_REG_ACCEL_XOUT_H,
+    I2C_MEMADD_SIZE_8BIT,
+    raw,
+    sizeof(raw),
+    10);
+
+    uint8_t counter=0;
+    for(uint8_t i=0;i<13;i+=2)
+    {
+      *arr[counter]=(int16_t)((raw[i] << 8) | raw[i+1]);
+      counter++;
+    }
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -208,8 +232,10 @@ int main(void)
   MX_CAN_Init();
   MX_I2C1_Init();
   MX_USART1_UART_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   init_icm20948();
+  HAL_Delay(1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -220,6 +246,9 @@ int main(void)
     read_icm20948_data(&ax,&ay,&az,
                        &gx,&gy,&gz,
                        &temp);
+
+    int16_t data_raw[7];
+    read_icm20948_data_arr(&data_raw);
 
     // ±4g → 8192 LSB/g
     // ±2000dps → 16.4 LSB/(°/s)
@@ -235,7 +264,10 @@ int main(void)
 
     float temp_c = temp / 333.87f + 21.0f;
 
-    HAL_UART_Transmit(&huart1, (uint8_t*)temp, sizeof(temp),2);
+    //float temp_c = 25.5f;
+
+    temp_c=(uint16_t)temp_c;
+    HAL_UART_Transmit(&huart2,(uint8_t*)&temp_c,2,5);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -380,6 +412,39 @@ static void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
+  * @brief USART2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART2_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART2_Init 0 */
+
+  /* USER CODE END USART2_Init 0 */
+
+  /* USER CODE BEGIN USART2_Init 1 */
+
+  /* USER CODE END USART2_Init 1 */
+  huart2.Instance = USART2;
+  huart2.Init.BaudRate = 115200;
+  huart2.Init.WordLength = UART_WORDLENGTH_8B;
+  huart2.Init.StopBits = UART_STOPBITS_1;
+  huart2.Init.Parity = UART_PARITY_NONE;
+  huart2.Init.Mode = UART_MODE_TX_RX;
+  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART2_Init 2 */
+
+  /* USER CODE END USART2_Init 2 */
 
 }
 
