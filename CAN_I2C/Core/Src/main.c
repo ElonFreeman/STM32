@@ -24,6 +24,7 @@
 #include "icm20948.h"
 #include "stm32f1xx_hal_uart.h"
 #include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,7 +48,6 @@ CAN_HandleTypeDef hcan;
 I2C_HandleTypeDef hi2c1;
 
 UART_HandleTypeDef huart1;
-UART_HandleTypeDef huart2;
 DMA_HandleTypeDef hdma_usart1_tx;
 
 /* USER CODE BEGIN PV */
@@ -61,7 +61,6 @@ static void MX_DMA_Init(void);
 static void MX_CAN_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_USART1_UART_Init(void);
-static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 void init_icm20948()
 {
@@ -147,9 +146,9 @@ void init_icm20948()
       1);
 }
 
-void read_icm20948_data(int16_t *ax,int16_t *ay,int16_t *az,
-                        int16_t *gx,int16_t *gy,int16_t *gz,
-                        int16_t *temp)
+
+
+void read_icm20948_data_arr(int16_t *arr)
 {
   uint8_t raw[14];
   HAL_I2C_Mem_Read(
@@ -159,37 +158,11 @@ void read_icm20948_data(int16_t *ax,int16_t *ay,int16_t *az,
     I2C_MEMADD_SIZE_8BIT,
     raw,
     sizeof(raw),
-    10);
+    2);
 
-
-    *ax = (int16_t)((raw[0] << 8) | raw[1]);
-    *ay = (int16_t)((raw[2] << 8) | raw[3]);
-    *az = (int16_t)((raw[4] << 8) | raw[5]);
-
-    *gx = (int16_t)((raw[6] << 8) | raw[7]);
-    *gy = (int16_t)((raw[8] << 8) | raw[9]);
-    *gz = (int16_t)((raw[10] << 8) | raw[11]);
-
-    *temp = (int16_t)((raw[12] << 8) | raw[13]);
-}
-
-void read_icm20948_data_arr(int16_t *arr[])
-{
-  uint8_t raw[14];
-  HAL_I2C_Mem_Read(
-    &hi2c1,
-    ICM20948_ADDR_HAL,
-    ICM_REG_ACCEL_XOUT_H,
-    I2C_MEMADD_SIZE_8BIT,
-    raw,
-    sizeof(raw),
-    10);
-
-    uint8_t counter=0;
-    for(uint8_t i=0;i<13;i+=2)
+    for (uint8_t i = 0; i < 7; i++)
     {
-      *arr[counter]=(int16_t)((raw[i] << 8) | raw[i+1]);
-      counter++;
+        arr[i] = (int16_t)((raw[2*i] << 8) | raw[2*i + 1]);
     }
 }
 /* USER CODE END PFP */
@@ -232,7 +205,6 @@ int main(void)
   MX_CAN_Init();
   MX_I2C1_Init();
   MX_USART1_UART_Init();
-  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   init_icm20948();
   HAL_Delay(1);
@@ -242,32 +214,46 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    int16_t ax=0,ay=0,az=0,gx=0,gy=0,gz=0,temp=0;
-    read_icm20948_data(&ax,&ay,&az,
-                       &gx,&gy,&gz,
-                       &temp);
-
     int16_t data_raw[7];
-    read_icm20948_data_arr(&data_raw);
+    read_icm20948_data_arr(data_raw);
 
+    float data[7];
+    for(uint8_t i=0;i<7;i++)
+    {
+      if(i>=0 && i<=2)
+      {
+        data[i] = data_raw[i] / 8192.0f;
+      }
+      else if(i>2 && i<=5)
+      {
+        data[i] = data_raw[i] / 16.4f;
+      }
+      else
+      {
+        data[i] = data_raw[i] / 333.87f + 21.0f;
+      }
+    }
+
+    printf("ax=%.3f ay=%.3f az=%.3f gx=%.2f gy=%.2f gz=%.2f T=%.2f\r\n",
+      data[0],data[1],data[2],data[3],data[4],data[5],data[6]);
+
+    HAL_Delay(20);
     // ±4g → 8192 LSB/g
     // ±2000dps → 16.4 LSB/(°/s)
     // 温度 → 温度(°C) = raw/333.87 + 21
 
-    float ax_g = ax / 8192.0f;
-    float ay_g = ay / 8192.0f;
-    float az_g = az / 8192.0f;
+    // float ax_g = ax / 8192.0f;
+    // float ay_g = ay / 8192.0f;
+    // float az_g = az / 8192.0f;
 
-    float gx_dps = gx / 16.4f;
-    float gy_dps = gy / 16.4f;
-    float gz_dps = gz / 16.4f;
+    // float gx_dps = gx / 16.4f;
+    // float gy_dps = gy / 16.4f;
+    // float gz_dps = gz / 16.4f;
 
-    float temp_c = temp / 333.87f + 21.0f;
+    // float temp_c = temp / 333.87f + 21.0f;
 
     //float temp_c = 25.5f;
 
-    temp_c=(uint16_t)temp_c;
-    HAL_UART_Transmit(&huart2,(uint8_t*)&temp_c,2,5);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -416,39 +402,6 @@ static void MX_USART1_UART_Init(void)
 }
 
 /**
-  * @brief USART2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USART2_UART_Init(void)
-{
-
-  /* USER CODE BEGIN USART2_Init 0 */
-
-  /* USER CODE END USART2_Init 0 */
-
-  /* USER CODE BEGIN USART2_Init 1 */
-
-  /* USER CODE END USART2_Init 1 */
-  huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
-  huart2.Init.WordLength = UART_WORDLENGTH_8B;
-  huart2.Init.StopBits = UART_STOPBITS_1;
-  huart2.Init.Parity = UART_PARITY_NONE;
-  huart2.Init.Mode = UART_MODE_TX_RX;
-  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&huart2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USART2_Init 2 */
-
-  /* USER CODE END USART2_Init 2 */
-
-}
-
-/**
   * Enable DMA controller clock
   */
 static void MX_DMA_Init(void)
@@ -485,7 +438,11 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+int _write(int fd, char *ptr, int len)
+{
+    HAL_UART_Transmit(&huart1, (uint8_t *)ptr, len, HAL_MAX_DELAY);
+    return len;
+}
 /* USER CODE END 4 */
 
 /**
