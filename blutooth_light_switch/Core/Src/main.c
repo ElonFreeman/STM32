@@ -47,7 +47,7 @@
 
 /* USER CODE BEGIN PV */
 char commands[2]="IT";
-enum LIGHT_STATUS{LIGHT_ON,LIGHT_OFF,INIT} light_status=INIT;
+enum LIGHT_STATUS{LIGHT_ON,LIGHT_OFF,INIT} light_status=INIT,current_status=INIT;
 int16_t duty_init=3250,duty1=0,duty2=0;
 /* USER CODE END PV */
 
@@ -103,13 +103,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty_init);
-  __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2,duty_init);
+  // __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty_init);
+  // __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2,duty_init);
 
   while (1)
   {
       HAL_UARTEx_ReceiveToIdle_DMA(&huart3, (uint8_t*)commands, sizeof(commands));
-      
+
       if(commands[1]=='N')
       {
         light_status=LIGHT_ON;
@@ -121,16 +121,26 @@ int main(void)
 
       switch(light_status)
       {
-        case LIGHT_ON : duty1=2700,duty2=3800; break;
-        case LIGHT_OFF : duty1=3800,duty2=2700; break;
+        case LIGHT_ON : duty1=3800,duty2=2700; break;
+        case LIGHT_OFF : duty1=2700,duty2=3800; break;
         case INIT : ; break;
         default : ;
       }
 
-      __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty1);
-      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2,duty2);
+      if(current_status!=light_status)
+      {
+        if(duty1>duty2){current_status=LIGHT_ON;}
+        else{current_status=LIGHT_OFF;}
 
-      
+        __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty1);
+        __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2,duty2);
+        HAL_Delay(1000);
+
+        __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,2700);
+        __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2,2700);
+        HAL_Delay(1000);
+      }
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
